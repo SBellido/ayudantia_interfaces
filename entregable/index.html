@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/estilo.css">
+<title>TP_Entregable - Interfaces</title>
+<link rel="icon" type="image/png" href="images/faviconSB.png" /></head>
+<body>
+    <header class="header">  
+        <nav class="navbar-expand-lg fixed-top">
+            <ul class="nav justify-content-center">
+                <li>
+                    <span class="nav-link">
+                        <h3>Photoshit</h3>
+                    </span> 
+                </li><hr>
+                <li>
+                    <input type="file" value="loadFile" id="inputFile" onclick="loadImage()" class="btn btn-outline-secondary">
+                    <a href="#" id="save" download="MiPhotoshit.jpg">
+                        <button type="button" class="btn btn-outline-secondary" name="guardar">Guardar</button>
+                    </a>
+                </li>     
+            </ul>            
+        </nav>
+    </header>
+    <br><br><hr><br> 
+    <section class="canvas" id="ej_6">
+        <div class="container">               
+            <div class="container">                
+                <canvas id="canvas" width="500" height="500" class="canvas">
+                    <img id="img" style="display:none">
+                </canvas>
+            </div> 
+            <div>
+                <input type="button" value="Brillo" id="buttonBright">
+                <input type="button" value="Desenfoque" id="buttonBlur">
+                <input type="button" value="Fotocopia" id="buttonBinarization">
+                <input type="button" value="Grises" id="buttonGrayScale">
+                <input type="button" value="Negativo" id="buttonNegative">
+                <input type="button" value="Saturación" id="buttonSaturation">
+                <input type="button" value="Sepia" id="buttonSepia">
+
+            </div>
+            <div>
+                <input type="button" value="Borrar" id="buttonClear" onclick="clear()">
+                <input type="button" value="Retaurar" id="buttonRestore" onclick="originPicture()">
+            </div>
+
+        </div>
+    </section>
+        
+    <footer class="navbar-expand-lg">
+        <div class="container">
+            <div class="footer">
+                <a id="sbSitio">UniCen / FCE / TUDAI / Interfaces de Usuario e Interacción - Bolívar / 2020</a>
+            </div> 
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Script TRABAJO PRÄCTICO -->
+    <script src="js/tp1_entregable.js"></script>
+
+
+</body>
+</html>
