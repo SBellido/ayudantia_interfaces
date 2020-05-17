@@ -29,7 +29,7 @@ function drawAllPictures() {
   }
 } 
 
-}
+
 function CallDrawImageMethod(imageData) {
     ctx.drawImage(imageData, 0, 0)
     ctx.putImageData (imageData, 0, 0 )

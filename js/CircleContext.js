@@ -1,4 +1,4 @@
-class figureCircle extends Figure {
+class CircleContext extends FigureContext {
     constructor(posX, posY, radio) {
         super(posX, posY)
         this.radio = radio

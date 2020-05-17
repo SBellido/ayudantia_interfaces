@@ -1,3 +1,4 @@
+
 class figureRect extends Figure {
     constructor(posX, posY, width, height) {
         super(posX, posY)

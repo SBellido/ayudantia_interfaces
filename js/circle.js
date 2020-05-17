@@ -1,10 +1,9 @@
 class Circle extends Figure {
-    constructor(posX, posY, color, radio) {
-        super(posX, posY, color)
+    constructor(posX, posY, fill, radio) {
+        super(posX, posY, fill)
         this.radio = radio
-        // this.fill = new Image()
-        // this.fill.src = './img/img1.jpg'
-    }    
+    }
+
     draw(ctx) {
         ctx.beginPath()
         ctx.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
@@ -13,16 +12,37 @@ class Circle extends Figure {
         ctx.closePath()
     }
 
-    // getPosX() {
-    //     return this.posX
-    // }
-    // getPosY() {
-    //     return this.posY
-    // }
-    // getRadio() {
-    //     return this.radio
-    // }
-    // getFill() {
-    //     return this.fill
-    // }
+    getRadio() {
+        return this.radio
+    }
+
+}
+
+
+class CircleContext extends FigureContext {
+    constructor(posX, posY, radio) {
+        super(posX, posY)
+        this.radio = radio
+    }
+
+    getRadio() {
+        return this.radio;
+    }
+
+    fillFigure(pattern) {
+        context.beginPath()
+        context.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
+        context.fillStyle = pattern
+        context.fill()
+        context.closePath()
+    }
+
+    draw() {
+        this.context.beginPath()
+        this.context.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
+        this.context.fillStyle = this.fill
+        this.context.fill()
+        this.context.closePath()
+    }
+
 }
