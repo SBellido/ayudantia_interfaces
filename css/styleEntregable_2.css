@@ -12,6 +12,6 @@ html,body { margin:0px; height:100%;
 
 .container {
     justify-content:center; }
-#img1 {
-  display: none;  
-}
+
+#img1, #img2, #img3, #img4  {
+  display: none;  }

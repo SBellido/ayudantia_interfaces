@@ -1,7 +1,7 @@
 
 class Rect extends Figure {
-    constructor(posX, posY, width, height) {
-        super(posX, posY)
+    constructor(posX, posY, fill, width, height) {
+        super(posX, posY, fill)
         this.width = width
         this.height = height
     }
@@ -22,8 +22,8 @@ class Rect extends Figure {
     }
 
     draw(ctx) {
-        ctx.fillStyle = this.color
-        ctx.fillRect(this.posX, this.posY, this.w, this.h)
+        ctx.fillStyle = this.fill
+        ctx.fillRect(this.posX, this.posY, this.width, this.height)
     }
     
     getWidth() {

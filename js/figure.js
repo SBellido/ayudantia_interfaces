@@ -27,17 +27,20 @@ class FigureContext {
     constructor(posX, posY) {
         this.posX = posX
         this.posY = posY
-        // this.context.createImageData(width, height, alpha)
-
     } 
-    
-    context() {
-        let canvas = document.getElementById('canvas')
+
+    getContext() {    
+        let canvas = document.getElementById('canvasPicture')
         let context = canvas.getContext('2d')
         return context
     }
 
-
+    getPosition() {
+        return { 
+            x: this.getPosX(),
+            y: this.getPosY()
+        }
+    }
     getPosX() {
         return this.posX
     }
@@ -47,13 +50,5 @@ class FigureContext {
     getFill() {
         return this.fill
     }
-    getContext() {
-        return this.context
-    }
-    getCanvas() {
-        return this.canvas
-    }
-    getContext() {
-        return this.context
-    }
+   
 }
