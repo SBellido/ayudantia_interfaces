@@ -7,7 +7,7 @@ class Circle extends Figure {
     draw(ctx) {
         ctx.beginPath()
         ctx.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
-        ctx.fillStyle = this.color
+        ctx.fillStyle = this.fill
         ctx.fill()
         ctx.closePath()
     }

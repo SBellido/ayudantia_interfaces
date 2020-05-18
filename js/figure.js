@@ -7,9 +7,7 @@ class Figure {
         // this.fill.src = './img/img1.jpg'
     } 
 
-    // gradient(gradient) {
-    //     this.gradient = gradient
-    // }
+   
 
     getPosX() {
         return this.posX
@@ -34,7 +32,10 @@ class FigureContext {
         let context = canvas.getContext('2d')
         return context
     }
-
+    
+    gradient(gradient) {
+        this.gradient = gradient
+    }
     getPosition() {
         return { 
             x: this.getPosX(),
