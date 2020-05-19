@@ -1,40 +1,16 @@
 class Circle extends Figure {
-    constructor(posX, posY, fill, radio) {
-        super(posX, posY, fill)
-        this.radio = radio
-    }
-
-    draw(ctx) {
-        ctx.beginPath()
-        ctx.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
-        ctx.fillStyle = this.fill
-        ctx.fill()
-        ctx.closePath()
-    }
-
-    getRadio() {
-        return this.radio
-    }
-
-}
-
-
-class CircleContext extends FigureContext {
     constructor(posX, posY, radio) {
         super(posX, posY)
         this.radio = radio
-    }
-
-    getRadio() {
-        return this.radio;
+        this.context = super.getContext()
     }
 
     fillFigure(pattern) {
-        context.beginPath()
-        context.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
-        context.fillStyle = pattern
-        context.fill()
-        context.closePath()
+       this.context.beginPath()
+       this.context.arc(this.posX, this.posY, this.radio, 0, 2 * Math.PI)
+       this.context.fillStyle = pattern
+       this.context.fill()
+       this.context.closePath()
     }
 
     draw() {
@@ -45,4 +21,9 @@ class CircleContext extends FigureContext {
         this.context.closePath()
     }
 
+    getRadio() {
+        return this.radio
+    }
+
 }
+

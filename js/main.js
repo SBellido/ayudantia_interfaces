@@ -41,12 +41,13 @@ function addCircleGradientFill() {
     gradientRadial.addColorStop(0, color1)
     gradientRadial.addColorStop(0.5, color2)
     gradientRadial.addColorStop(1, color3)
-    
+
     gradient.addColorStop(0, color1)
     gradient.addColorStop(0.5, color2)
     gradient.addColorStop(1, color3)
 
-    let circle = new Circle(widthCanvas / 2, heightCanvas / 2, gradientRadial, radio)
+    let circle = new Circle(widthCanvas / 2, heightCanvas / 2, radio)
+    circle.fillIn(gradientRadial)
     figures.push(circle)    
 
 }
@@ -71,8 +72,8 @@ let contextPicture = canvas.getContext('2d')
 let radio = 100
 let posXCircle = radio
 let posYCircle = radio
-let circleContext = new CircleContext(posXCircle, posYCircle, radio)
-let rectContext = new RectContext(startCanvasX, startCanvasY, widthCanvas, heightCanvas)
+let circleContext = new Circle(posXCircle, posYCircle, radio)
+let rectContext = new Rect(startCanvasX, startCanvasY, widthCanvas, heightCanvas)
 
 addCircleFillPicture()
 
@@ -180,7 +181,8 @@ function addRect() {
     let posX = Math.round(Math.random() * widthCanvas)
     let posY = Math.round(Math.random() * heightCanvas)
     let color = randomRGBA()
-    let rect = new Rect(posX, posY, color, 20, 20)
+    let rect = new Rect(posX, posY, 20, 20)
+    rect.fillIn(color)
     figures.push(rect)    
 }
 
@@ -188,7 +190,8 @@ function addCircle() {
     let posX = Math.round(Math.random() * widthCanvas)
     let posY = Math.round(Math.random() * heightCanvas)
     let color = randomRGBA()
-    let circle = new Circle(posX, posY, color, 20)
+    let circle = new Circle(posX, posY, 20)
+    circle.fillIn(color)
     figures.push(circle)
 }
 
